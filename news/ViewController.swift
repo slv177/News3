@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     "articles": [
         {
             "source": {
-                "id": null,
+                "id": "null",
                 "name": "Lifehacker.com"
             },
             "author": "Emily Price",
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         },
         {
             "source": {
-                "id": null,
+                "id": "null",
                 "name": "Lifehacker.com"
             },
             "author": "David Murphy",
@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         },
         {
             "source": {
-                "id": null,
+                "id": "null",
                 "name": "Lifehacker.com"
             },
             "author": "Aimée Lutkin",
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
         },
         {
             "source": {
-                "id": null,
+                "id": "null",
                 "name": "Lifehacker.com"
             },
             "author": "David Murphy",
@@ -79,9 +79,9 @@ class ViewController: UIViewController {
             "title": "Apple is about to ship its two billionth iOS device",
             "description": "Apple kicked off its fall event iPhone and Apple Watch with a big statistic: The total number of iOS devices the company has shipped is about to reach two billion. The device giant had previously announced that it had topped a billion active devices, includin…",
             "url": "https://www.engadget.com/2018/09/12/apple-is-about-to-ship-its-two-billionth-ios-device/",
-            "urlToImage": null,
+            "urlToImage": "null",
             "publishedAt": "2018-09-12T17:20:00Z",
-            "content": null
+            "content": "null"
         },
         {
             "source": {
@@ -102,30 +102,23 @@ class ViewController: UIViewController {
         
         struct Status: Codable {
             let status: String
-        }
-        
-        struct TotalResults: Codable {
             let totalResults: Int
-        }
-        
-        struct Articles: Codable {
             let articles: [Article]
         }
         
         struct Article: Codable {
-            //let tire: String
             let source: Source
             let author: String
             let title: String
             let description: String
-            let url: URL //TODO: URL
-            let urlToImage: URL //TODO: URL
+            let url: String //TODO: URL
+            let urlToImage: String //TODO: URL
             let publishedAt: String //TODO: date
-            let content: String
+            let content: String //TODO: Null
         }
         
         struct Source: Codable {
-            let id: String?
+            let id: String //TODO: Null
             let name: String
         }
         
