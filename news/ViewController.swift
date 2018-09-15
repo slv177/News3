@@ -101,27 +101,27 @@ class ViewController: UIViewController {
 """
         
         struct Status: Codable {
-            struct TotalResults: Codable {
-                struct Articles: Codable {
-                    struct Article: Codable {
-                        //let tire: String
-                        let source: Source
-                        let author: String
-                        let title: String
-                        let description: String
-                        let url: URL //TODO: URL
-                        let urlToImage: URL //TODO: URL
-                        let publishedAt: String //TODO: date
-                        let content: String
-                    }
-                    
-                    let articles: [Article]
-                }
-                
-                let totalResults: Int
-            }
-            
             let status: String
+        }
+        
+        struct TotalResults: Codable {
+            let totalResults: Int
+        }
+        
+        struct Articles: Codable {
+            let articles: [Article]
+        }
+        
+        struct Article: Codable {
+            //let tire: String
+            let source: Source
+            let author: String
+            let title: String
+            let description: String
+            let url: URL //TODO: URL
+            let urlToImage: URL //TODO: URL
+            let publishedAt: String //TODO: date
+            let content: String
         }
         
         struct Source: Codable {
@@ -141,6 +141,5 @@ class ViewController: UIViewController {
         print (json)
         
     }
-    
 }
 
