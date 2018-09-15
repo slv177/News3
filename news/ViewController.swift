@@ -133,7 +133,7 @@ class ViewController: UIViewController {
         let decoder = JSONDecoder()
         let stat = try! decoder.decode(Status.self, from: inputData)
         dump(stat)
-        
+// 
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         let data = try! encoder.encode(stat)
